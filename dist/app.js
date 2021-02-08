@@ -22,7 +22,7 @@ const models_1 = require("./models");
 const mongoose_1 = require("mongoose");
 const utils_1 = require("./utils/utils");
 const SeoHelper_1 = __importDefault(require("./helpers/SeoHelper"));
-var fs = require('fs-extra');
+//var fs = require('//');
 var Jimp = require('jimp');
 const mongoose = require('mongoose');
 var fs = require('fs');
@@ -49,21 +49,6 @@ class App {
                 const seoHelper = new SeoHelper_1.default();
                 seoHelper.downloadHtaccess();
             }
-            console.log(process.cwd());
-            let images = yield fs.readdirSync('site/images/');
-            // for (const image of images) {
-            //   try{
-            //     const name = image.replace('.jpg', '')
-            //     const img = await Jimp.read(`site/images/${image}`)
-            //     await img.resize(640, Jimp.AUTO).quality(90);
-            //     let result = await img.getBufferAsync(Jimp.MIME_JPEG);
-            //     await fs.writeFileSync(`site/images/${name}_thumb.jpg`, result)
-            //     console.log(result)
-            //   }catch(e) {
-            //     console.log(e)
-            //   }
-            // }
-            this.import();
         });
     }
     createFolders() {
@@ -123,12 +108,7 @@ class App {
     }
     import() {
         return __awaiter(this, void 0, void 0, function* () {
-            //connection.connect();
-            const images = yield models_1.Image.find();
-            for (const image of images) {
-                image.uri = image.uri.replace('.jpg', '');
-                image.save();
-            }
+            //connection.connect()
             // const projects = await Project.find({slug: 'inkcisivi'}).populate('images')
             // console.log(projects)
             // let image:any = {}
