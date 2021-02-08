@@ -31,6 +31,7 @@ class ImageHelper {
   }
 
   async createJPGAndUpload(name: string, size: any, suffix: string) {
+    console.log(`uploading ${process.env.SITE_IMAGE_PATH}${name}.jpg`)
     const originalImage = `${process.env.SITE_IMAGE_PATH}${name}.jpg`
     const image = await Jimp.read(originalImage)
     if (size.height === 0) {
@@ -41,6 +42,7 @@ class ImageHelper {
     await fs.writeFileSync(`${process.env.SITE_IMAGE_PATH}${name}${suffix}.jpg`, result)
     await clientftp.upload(`${process.env.SITE_IMAGE_PATH}${name}${suffix}.jpg`, `${process.env.REMOTE_IMAGES_PATH}${name}${suffix}.jpg`, 755)
     await this.clearFolder()
+    console.log(`${process.env.SITE_IMAGE_PATH}${name}.jpg uploaded`)
   }
 
   async createWEBPAndUpload(name: string, size: any, suffix: string) {
@@ -57,6 +59,7 @@ class ImageHelper {
   }
 
   async clearFolder() {
+    console.log("cleaning images folder...")
     let filesToRemove: any = await fs.readdirSync(`${process.env.SITE_IMAGE_PATH}`).filter( (file: any) => {
       return file.match(/.jpg/ig)
     });
@@ -72,6 +75,7 @@ class ImageHelper {
     for(const file of filesToRemove) {
       await fs.unlinkSync(`${process.env.SITE_IMAGE_PATH}${file}`)
     }
+    console.log("images folder clean")
   }
 
   
