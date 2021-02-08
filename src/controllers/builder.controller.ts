@@ -57,12 +57,10 @@ class BuilderController {
       for (const resource of page.resources) {
 
         if (resource.type == 'projects') {
-          console.log("project", )
           resources.projects = (await Project.find(resource.filter)
                                 .sort('order')
                                 .populate({path: 'images', options: { sort: { 'ord': 1 } } }))
                                 .map((item: any) => item ? item.toObject() : null)
-          console.log("resources.projects", resources.projects)
         }
 
       }

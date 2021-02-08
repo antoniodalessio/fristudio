@@ -47,6 +47,7 @@ class ImageHelper {
     }
     createJPGAndUpload(name, size, suffix) {
         return __awaiter(this, void 0, void 0, function* () {
+            console.log(`uploading ${process.env.SITE_IMAGE_PATH}${name}.jpg`);
             const originalImage = `${process.env.SITE_IMAGE_PATH}${name}.jpg`;
             const image = yield Jimp.read(originalImage);
             if (size.height === 0) {
@@ -56,6 +57,8 @@ class ImageHelper {
             let result = yield image.getBufferAsync(Jimp.MIME_JPEG);
             yield fs.writeFileSync(`${process.env.SITE_IMAGE_PATH}${name}${suffix}.jpg`, result);
             yield clientftp.upload(`${process.env.SITE_IMAGE_PATH}${name}${suffix}.jpg`, `${process.env.REMOTE_IMAGES_PATH}${name}${suffix}.jpg`, 755);
+            yield this.clearFolder();
+            console.log(`${process.env.SITE_IMAGE_PATH}${name}.jpg uploaded`);
         });
     }
     createWEBPAndUpload(name, size, suffix) {
@@ -66,6 +69,24 @@ class ImageHelper {
                 console.log(status, error);
             });
             //await clientftp.upload(`${process.env.SITE_IMAGE_PATH}${name}${suffix}.webp`, `${process.env.REMOTE_IMAGES_PATH}${name}${suffix}.webp`, 755)
+        });
+    }
+    clearFolder() {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log("cleaning images folder...");
+            let filesToRemove = yield fs.readdirSync(`${process.env.SITE_IMAGE_PATH}`).filter((file) => {
+                return file.match(/.jpg/ig);
+            });
+            for (const file of filesToRemove) {
+                yield fs.unlinkSync(`${process.env.SITE_IMAGE_PATH}${file}`);
+            }
+            filesToRemove = yield fs.readdirSync(`./`).filter((file) => {
+                return file.match(/.jpg/ig);
+            });
+            for (const file of filesToRemove) {
+                yield fs.unlinkSync(`${process.env.SITE_IMAGE_PATH}${file}`);
+            }
+            console.log("images folder clean");
         });
     }
     ftpRename(oldName, newName) {
