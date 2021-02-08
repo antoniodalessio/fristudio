@@ -1,0 +1,27 @@
+---
+home: portfolio
+key: portfolio
+---
+
+
+<div class="page project">
+	<div class="container-viewport-centered container-viewport-centered--scroll">
+		<div class="container-viewport-centered__wrapper container-viewport-centered__wrapper--scroll">
+			<div class="project-header">
+				<div class="project-header__left">
+					<h1>{{this.title}}</h1>
+					<h2>{{this.subtitle}}</h2>
+				</div>
+				<div class="project-header__right">
+				<div class="project-header__content project__content">{{{this.body}}}</div>
+				</div>
+			</div>
+			{{#each this.images}}
+				{{this.title}}
+				<div class="portfolio-template {{#ifEquals this.type "2"}}double{{/ifEquals}}" >
+					<img src="images/{{this.uri}}.jpg" />
+				</div>
+			{{/each}}
+		</div>
+	</div>
+</div>

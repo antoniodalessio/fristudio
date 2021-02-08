@@ -1,0 +1,32 @@
+<div class="menu__container">
+    <button class="close-icon">
+        <i class="icon icon-chiudi"></i>
+    </button>
+    <nav>
+      <ul>
+        <li class="">
+          <a href="simone-montagnani-graphic-designer.html">Chi sono</a>
+        </li>
+        <li class="">
+          <a href="progetti-simone-montagnani-designer-freelance.html">Lavori</a>
+        </li>
+        <li class="">
+          <a href="contatti-simone-montagnani-designer-firenze.html">Contatti</a>
+        </li>
+      {{!-- @foreach ($page->menu as $item)
+        @if ($item->parent_id == 0)
+        <li @if ($item->page_id == $page->page_id) class="active" @endif>
+          <a href="{{$item->page->contents[0]->slug}}">{{$item->title}}</a>
+          @if (count($item->children) > 0)
+            <ul class="submenu">
+            @foreach ($item->children as $subitem)
+              <li @if ($subitem->page_id == $page->page_id) class="active" @endif><a href="{{$subitem->uri}}">{{$subitem->title}}</a></li>
+            @endforeach
+            </ul>
+          @endif
+        </li>
+        @endif
+      @endforeach --}}
+      </ul>
+    </nav>
+</div>

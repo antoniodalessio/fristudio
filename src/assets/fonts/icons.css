@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "icons";
+    src: url("../fonts/icons.eot?5716dc2e80b68a4a3a69c0fad406f6c5#iefix") format("embedded-opentype"),
+url("../fonts/icons.woff2?5716dc2e80b68a4a3a69c0fad406f6c5") format("woff2"),
+url("../fonts/icons.woff?5716dc2e80b68a4a3a69c0fad406f6c5") format("woff");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ancora_intera:before {
+    content: "\f101";
+}
+.icon-behance:before {
+    content: "\f102";
+}
+.icon-chiudi:before {
+    content: "\f103";
+}
+.icon-favicon:before {
+    content: "\f104";
+}
+.icon-hamburger:before {
+    content: "\f105";
+}
+.icon-instagram:before {
+    content: "\f106";
+}
+.icon-logo:before {
+    content: "\f107";
+}
+.icon-rosa:before {
+    content: "\f108";
+}

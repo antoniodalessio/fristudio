@@ -1,0 +1,26 @@
+@import "common";
+
+.contatti__container {
+	display: flex;
+	width: 100%;
+    justify-content: center;
+}
+
+.icon_container {
+	width: 36px;
+	height: 36px;
+	display: inline-block;
+	color: black;
+	.icon-behance, .icon-instagram {
+		width: 36px;
+		height: 36px;
+		font-size: 36px;	
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.contatti__container {
+		height: 100vh;
+    	align-items: center;
+	}
+}

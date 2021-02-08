@@ -1,0 +1,39 @@
+@import "common";
+
+.about-us {
+	.icon-rosa {
+		position: absolute;
+		font-size: 100px;
+		left: 160px;
+    	top: 160px;
+	}
+
+	@media only screen and (max-height: 830px) {
+		.container-viewport-centered {
+			display: -webkit-box;
+			&__wrapper {
+				margin-top: 40px;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 1200px) {
+		.container-viewport-centered {
+			height: auto;
+			margin-top: 50px;
+		}
+	}
+
+}
+
+.about-us__content {
+	padding-top: 50px;
+	hr {
+		width: 70%;
+		margin: 30px 0;
+		height: 2px;
+	}
+	p {
+		line-height: 24px;
+	}
+}
