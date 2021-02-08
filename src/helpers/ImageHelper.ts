@@ -40,6 +40,7 @@ class ImageHelper {
     let result = await image.getBufferAsync(Jimp.MIME_JPEG);
     await fs.writeFileSync(`${process.env.SITE_IMAGE_PATH}${name}${suffix}.jpg`, result)
     await clientftp.upload(`${process.env.SITE_IMAGE_PATH}${name}${suffix}.jpg`, `${process.env.REMOTE_IMAGES_PATH}${name}${suffix}.jpg`, 755)
+    await this.clearFolder()
   }
 
   async createWEBPAndUpload(name: string, size: any, suffix: string) {
@@ -53,6 +54,24 @@ class ImageHelper {
         console.log(status,error);	
       });
       //await clientftp.upload(`${process.env.SITE_IMAGE_PATH}${name}${suffix}.webp`, `${process.env.REMOTE_IMAGES_PATH}${name}${suffix}.webp`, 755)
+  }
+
+  async clearFolder() {
+    let filesToRemove: any = await fs.readdirSync(`${process.env.SITE_IMAGE_PATH}`).filter( (file: any) => {
+      return file.match(/.jpg/ig)
+    });
+
+    for(const file of filesToRemove) {
+      await fs.unlinkSync(`${process.env.SITE_IMAGE_PATH}${file}`)
+    }
+
+    filesToRemove = await fs.readdirSync(`./`).filter( (file: any) => {
+      return file.match(/.jpg/ig)
+    });
+
+    for(const file of filesToRemove) {
+      await fs.unlinkSync(`${process.env.SITE_IMAGE_PATH}${file}`)
+    }
   }
 
   
