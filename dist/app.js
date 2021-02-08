@@ -22,8 +22,18 @@ const models_1 = require("./models");
 const mongoose_1 = require("mongoose");
 const utils_1 = require("./utils/utils");
 const SeoHelper_1 = __importDefault(require("./helpers/SeoHelper"));
+var fs = require('fs-extra');
+var Jimp = require('jimp');
 const mongoose = require('mongoose');
 var fs = require('fs');
+var mysql = require('mysql');
+var connection = mysql.createConnection({
+    host: 'localhost',
+    port: '8889',
+    user: 'root',
+    password: 'root',
+    database: 'fristudio_backup'
+});
 class App {
     constructor() {
         this.init();
@@ -39,6 +49,21 @@ class App {
                 const seoHelper = new SeoHelper_1.default();
                 seoHelper.downloadHtaccess();
             }
+            console.log(process.cwd());
+            let images = yield fs.readdirSync('site/images/');
+            // for (const image of images) {
+            //   try{
+            //     const name = image.replace('.jpg', '')
+            //     const img = await Jimp.read(`site/images/${image}`)
+            //     await img.resize(640, Jimp.AUTO).quality(90);
+            //     let result = await img.getBufferAsync(Jimp.MIME_JPEG);
+            //     await fs.writeFileSync(`site/images/${name}_thumb.jpg`, result)
+            //     console.log(result)
+            //   }catch(e) {
+            //     console.log(e)
+            //   }
+            // }
+            this.import();
         });
     }
     createFolders() {
@@ -94,6 +119,82 @@ class App {
                 const result = yield user.save();
                 console.log(result);
             }
+        });
+    }
+    import() {
+        return __awaiter(this, void 0, void 0, function* () {
+            //connection.connect();
+            const images = yield models_1.Image.find();
+            for (const image of images) {
+                image.uri = image.uri.replace('.jpg', '');
+                image.save();
+            }
+            // const projects = await Project.find({slug: 'inkcisivi'}).populate('images')
+            // console.log(projects)
+            // let image:any = {}
+            // image._id = new Types.ObjectId()
+            // image.uri = 'images/03f7f54bc12811d70fb9daaf73caf277.jpg'
+            // image.type = 2
+            // let imageInstance = new Image(image)
+            // const img = await imageInstance.save()
+            // projects[0].images.push(img)
+            // await projects[0].save()
+            // for(const project of projects ) {
+            //   project.images = [];
+            //   await project.save();
+            //   const query = "SELECT * from pages join page_contents join page_sections where page_contents.page_id = pages.id and pages.id=page_sections.page_id and pages.type_id=2 and pages.id=21"
+            //   console.log(query)
+            //   await connection.query(query, async function(error:any, results:any, fields:any) {
+            //     console.log(results)
+            //     let images = []
+            //     for (const imageRes of results) {
+            //       console.log(query, results.length)
+            //       let image:any = {}
+            //       image._id = new Types.ObjectId()
+            //       image.uri = imageRes.img
+            //       image.type = imageRes.type_id
+            //       let imageInstance = new Image(image)
+            //       const img = await imageInstance.save()
+            //       images.push(img)
+            //       project.images = images
+            //       await project.save()
+            //     }
+            //   })
+            // }
+            // connection.query('SELECT * from pages join page_contents where page_contents.page_id = pages.id and pages.type_id=2', async function (error:any, results:any, fields:any) {
+            //   if (error) throw error;
+            //   let res = results.map((elem:any) => {
+            //     return {
+            //       name: elem.name,
+            //       title: elem.title,
+            //       subtitle: elem.subtitle,
+            //       slug: elem.slug,
+            //       ord: elem.ord,
+            //       meta: {
+            //         title: elem.meta_title,
+            //         description: elem.meta_description,
+            //         keywords: elem.meta_keywords
+            //       },
+            //       body: elem.content
+            //     }
+            //   })
+            //   console.log(res.length)
+            //   for(const item of res ) {
+            //     const elem = await Project.find({slug: item.slug})
+            //     if (elem.length == 0) {
+            //       console.log("elem", elem)
+            //       item._id = new Types.ObjectId()
+            //       const newProject = new Project(item)
+            //       const result = await newProject.save()
+            //       console.log(result)
+            //     }
+            //   }
+            //   //console.log(res)
+            //   // results.foreach((item:any) => {
+            //   //   console.log(results)
+            //   // })
+            // });
+            // connection.end();
         });
     }
 }

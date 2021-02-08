@@ -36,10 +36,9 @@ class BuilderController {
     }
     buildSitemapXml() {
         return __awaiter(this, void 0, void 0, function* () {
-            const categories = (yield models_1.Category.find()).map((item) => item ? item.toObject() : null);
-            const products = (yield models_1.Product.find().populate('images')).map((item) => item ? item.toObject() : null);
+            const projects = (yield models_1.Project.find().populate('images')).map((item) => item ? item.toObject() : null);
             const pages = (yield models_1.Page.find()).map((item) => item ? item.toObject() : null);
-            const resources = categories.concat(products).concat(pages);
+            const resources = projects.concat(pages);
             const data = {
                 resources: resources.filter((resource) => resource.template != 'index' && resource.template != '404'),
                 baseUrl: process.env.SITE_URL,
@@ -54,16 +53,13 @@ class BuilderController {
             if (page.hasOwnProperty('resources') && page.resources.length > 0) {
                 let resources = {};
                 for (const resource of page.resources) {
-                    if (resource.type == 'story') {
-                        resources.stories = (yield models_1.Story.find(resource.filter)
+                    if (resource.type == 'projects') {
+                        console.log("project");
+                        resources.projects = (yield models_1.Project.find(resource.filter)
                             .sort('order')
                             .populate({ path: 'images', options: { sort: { 'ord': 1 } } }))
                             .map((item) => item ? item.toObject() : null);
-                    }
-                    if (resource.type == 'service') {
-                        resources.services = (yield models_1.Service.find(resource.filter)
-                            .sort('order'))
-                            .map((item) => item ? item.toObject() : null);
+                        console.log("resources.projects", resources.projects);
                     }
                 }
                 page.resources = resources;
@@ -77,7 +73,6 @@ class BuilderController {
             const pags = [];
             for (let page of pages) {
                 page = yield this.addResources(page);
-                console.log(page);
                 page.pageImage = `${process.env.SITE_URL}/images/logo.png`;
                 pags.push(page);
             }
@@ -95,63 +90,25 @@ class BuilderController {
             }
         });
     }
-    buildBreadCrumb(cat, array = []) {
+    buildProjects() {
         return __awaiter(this, void 0, void 0, function* () {
-            array.push({
-                slug: cat.slug,
-                label: cat.category_name
-            });
-            if (!cat.parent) {
-                return array;
+            let projects = yield models_1.Project.find().sort('-order').populate({ path: 'images', options: { sort: { 'ord': 1 } } });
+            let projs = [];
+            for (let project of projects) {
+                let proj = project.toObject();
+                proj = yield this.addResources(proj);
+                projs.push(proj);
             }
-            else {
-                const parentCat = (yield models_1.Category.findOne({ _id: cat.parent })).toObject();
-                return yield this.buildBreadCrumb(parentCat, array);
-            }
+            return projs;
         });
     }
-    buildServices() {
+    uploadProjects(projects, unpublished) {
         return __awaiter(this, void 0, void 0, function* () {
-            let services = yield models_1.Service.find().populate({ path: 'images', options: { sort: { 'ord': 1 } } });
-            let servs = [];
-            for (let service of services) {
-                let serv = service.toObject();
-                serv = yield this.addResources(serv);
-                servs.push(serv);
-            }
-            return servs;
-        });
-    }
-    uploadServices(services, unpublished) {
-        return __awaiter(this, void 0, void 0, function* () {
-            for (const service of services) {
-                if (!unpublished || !service.published) {
-                    yield this.assemble.render("service", service);
-                    this.fileToUpload.push(service.slug);
-                    yield models_1.Product.updateOne({ _id: service._id }, { published: true });
-                }
-            }
-        });
-    }
-    buildStories() {
-        return __awaiter(this, void 0, void 0, function* () {
-            let stories = yield models_1.Story.find().sort('-order').populate({ path: 'images', options: { sort: { 'ord': 1 } } });
-            let stors = [];
-            for (let story of stories) {
-                let stor = story.toObject();
-                stor = yield this.addResources(stor);
-                stors.push(stor);
-            }
-            return stors;
-        });
-    }
-    uploadStories(stories, unpublished) {
-        return __awaiter(this, void 0, void 0, function* () {
-            for (const story of stories) {
-                if (!unpublished || !story.published) {
-                    yield this.assemble.render("story", story);
-                    this.fileToUpload.push(story.slug);
-                    yield models_1.Product.updateOne({ _id: story._id }, { published: true });
+            for (const project of projects) {
+                if (!unpublished || !project.published) {
+                    yield this.assemble.render("portfolio", project);
+                    this.fileToUpload.push(project.slug);
+                    yield models_1.Project.updateOne({ _id: project._id }, { published: true });
                 }
             }
         });
@@ -194,8 +151,7 @@ class BuilderController {
     build(unpublished) {
         return __awaiter(this, void 0, void 0, function* () {
             yield this.uploadStaticPages(yield this.buildStaticPages(), unpublished);
-            yield this.uploadServices(yield this.buildServices(), unpublished);
-            yield this.uploadStories(yield this.buildStories(), unpublished);
+            yield this.uploadProjects(yield this.buildProjects(), unpublished);
         });
     }
     publish(req, res) {

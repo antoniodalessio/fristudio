@@ -130,6 +130,7 @@ class BaseController {
     }
     saveOrUpdateImages(newData) {
         return __awaiter(this, void 0, void 0, function* () {
+            console.log(newData);
             let imagesIDS = [];
             if (newData.images && newData.images.length > 0) {
                 let images = newData.images;

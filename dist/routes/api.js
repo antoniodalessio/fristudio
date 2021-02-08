@@ -15,17 +15,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const routes = require('express').Router();
 const user_controller_1 = __importDefault(require("../controllers/user.controller"));
 const page_controller_1 = __importDefault(require("../controllers/page.controller"));
-const story_controller_1 = __importDefault(require("../controllers/story.controller"));
 const builder_controller_1 = __importDefault(require("../controllers/builder.controller"));
 const image_controller_1 = __importDefault(require("../controllers/image.controller"));
-const service_controller_1 = __importDefault(require("../controllers/service.controller"));
+const project_controller_1 = __importDefault(require("../controllers/project.controller"));
 function initApiRoutes() {
     let userCTRL = new user_controller_1.default();
     let pageCTRL = new page_controller_1.default();
     let builderCTRL = new builder_controller_1.default();
     let imageCTRL = new image_controller_1.default();
-    let storyCTRL = new story_controller_1.default();
-    let serviceCTRL = new service_controller_1.default();
+    let projectCTRL = new project_controller_1.default();
     routes.use((req, res, next) => verifyToken(req, res, next));
     routes.get('/user', (req, res) => __awaiter(this, void 0, void 0, function* () { yield userCTRL.getAll(req, res); }));
     routes.get('/user/:id', (req, res) => __awaiter(this, void 0, void 0, function* () { yield userCTRL.get(req, res); }));
@@ -37,22 +35,25 @@ function initApiRoutes() {
     routes.post('/page', (req, res) => __awaiter(this, void 0, void 0, function* () { yield pageCTRL.create(req, res); }));
     routes.put('/page/:id', (req, res) => __awaiter(this, void 0, void 0, function* () { yield pageCTRL.update(req, res); }));
     routes.delete('/page/:id', (req, res) => __awaiter(this, void 0, void 0, function* () { yield pageCTRL.delete(req, res); }));
-    routes.get('/story', (req, res) => __awaiter(this, void 0, void 0, function* () { yield storyCTRL.getAll(req, res); }));
-    routes.get('/story/:id', (req, res) => __awaiter(this, void 0, void 0, function* () { yield storyCTRL.get(req, res); }));
-    routes.post('/story', (req, res) => __awaiter(this, void 0, void 0, function* () { yield storyCTRL.create(req, res); }));
-    routes.put('/story/:id', (req, res) => __awaiter(this, void 0, void 0, function* () { yield storyCTRL.update(req, res); }));
-    routes.delete('/story/:id', (req, res) => __awaiter(this, void 0, void 0, function* () { yield storyCTRL.delete(req, res); }));
-    routes.get('/service', (req, res) => __awaiter(this, void 0, void 0, function* () { yield serviceCTRL.getAll(req, res); }));
-    routes.get('/service/:id', (req, res) => __awaiter(this, void 0, void 0, function* () { yield serviceCTRL.get(req, res); }));
-    routes.post('/service', (req, res) => __awaiter(this, void 0, void 0, function* () { yield serviceCTRL.create(req, res); }));
-    routes.put('/service/:id', (req, res) => __awaiter(this, void 0, void 0, function* () { yield serviceCTRL.update(req, res); }));
-    routes.delete('/service/:id', (req, res) => __awaiter(this, void 0, void 0, function* () { yield serviceCTRL.delete(req, res); }));
+    const projectRoute = 'project';
+    routes.get(`/${projectRoute}`, (req, res) => __awaiter(this, void 0, void 0, function* () { yield projectCTRL.getAll(req, res); }));
+    routes.get(`/${projectRoute}/:id`, (req, res) => __awaiter(this, void 0, void 0, function* () { yield projectCTRL.get(req, res); }));
+    routes.post(`/${projectRoute}`, (req, res) => __awaiter(this, void 0, void 0, function* () { yield projectCTRL.create(req, res); }));
+    routes.put(`/${projectRoute}/:id`, (req, res) => __awaiter(this, void 0, void 0, function* () { yield projectCTRL.update(req, res); }));
+    routes.delete(`/${projectRoute}/:id`, (req, res) => __awaiter(this, void 0, void 0, function* () { yield projectCTRL.delete(req, res); }));
     routes.get('/image', (req, res) => __awaiter(this, void 0, void 0, function* () { yield imageCTRL.getAll(req, res); }));
     routes.get('/image/:id', (req, res) => __awaiter(this, void 0, void 0, function* () { yield imageCTRL.get(req, res); }));
     routes.post('/image', (req, res) => __awaiter(this, void 0, void 0, function* () { yield imageCTRL.create(req, res); }));
     routes.put('/image/:id', (req, res) => __awaiter(this, void 0, void 0, function* () { yield imageCTRL.update(req, res); }));
     routes.delete('/image/:id', (req, res) => __awaiter(this, void 0, void 0, function* () { yield imageCTRL.delete(req, res); }));
     routes.get('/publish', (req, res) => __awaiter(this, void 0, void 0, function* () { yield builderCTRL.publish(req, res); }));
+}
+function createDefaultRoutes(route, controller) {
+    routes.get(`/${route}`, (req, res) => __awaiter(this, void 0, void 0, function* () { yield controller.getAll(req, res); }));
+    routes.get(`/${route}/:id`, (req, res) => __awaiter(this, void 0, void 0, function* () { yield controller.get(req, res); }));
+    routes.post(`/${route}`, (req, res) => __awaiter(this, void 0, void 0, function* () { yield controller.create(req, res); }));
+    routes.put(`/${route}/:id`, (req, res) => __awaiter(this, void 0, void 0, function* () { yield controller.update(req, res); }));
+    routes.delete(`/${route}/:id`, (req, res) => __awaiter(this, void 0, void 0, function* () { yield controller.delete(req, res); }));
 }
 function verifyToken(req, res, next) {
     const bearerHeader = req.headers['authorization'];

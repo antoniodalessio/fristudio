@@ -12,6 +12,9 @@ const image = new mongoose_1.Schema({
     },
     ord: {
         type: Number
+    },
+    type: {
+        type: String
     }
 });
 exports.image = image;

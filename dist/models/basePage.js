@@ -38,7 +38,7 @@ const defaultPageField = {
         type: String
     },
     ord: {
-        type: Number
+        type: String
     },
     published: {
         type: Boolean
