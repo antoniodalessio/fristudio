@@ -1,5 +1,0 @@
-# redirect 301 /pagina_vecchia.html /index.html
-ErrorDocument 404 /404.html
-redirect 301 /progetti-simone-montagnani-designer-freelance /progetti-simone-montagnani-designer-freelance.html
-redirect 301 /simone-montagnani-graphic-designer /simone-montagnani-graphic-designer.html
-redirect 301 /contatti-simone-montagnani-designer-firenze /contatti-simone-montagnani-designer-firenze.html
