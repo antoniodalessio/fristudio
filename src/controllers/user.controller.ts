@@ -13,8 +13,6 @@ class UserController extends BaseController {
 
   async create(req: any, res: any) {
 
-    console.log(req.body)
-
     try{
       const data = await this.model.find({username: req.body.username})
       if (data.length != 0) {

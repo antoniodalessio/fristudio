@@ -23,7 +23,6 @@ class UserController extends base_controller_1.default {
     }
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log(req.body);
             try {
                 const data = yield this.model.find({ username: req.body.username });
                 if (data.length != 0) {
