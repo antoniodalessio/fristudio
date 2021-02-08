@@ -9,4 +9,4 @@ Posizionarsi all'interno della cartalla
 
 Importare da shell da cloudnode con
 
-`mongorestore -h mongodb_1:27017 -u antonio.dalessio -p 1QyxqMm0rC --db giorgini dump`
+`mongorestore -h mongodb_1:27017 -u antonio.dalessio -p 1QyxqMm0rC --db fristudio dump`
