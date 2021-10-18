@@ -1,4 +1,12 @@
-Per fare un import del db su cloudnode
+# Starting project
+`npm run start:watch``
+Run server in watch mode.
+This command in dev environment watch file scss, js and template in order to put them into dist(or antother folder in env file)
+Gruntfile is obsolete.
+
+Open site on 127.0.0.1:15645
+
+#Per fare un import del db su cloudnode
 
 Esportare il db da locale con
 

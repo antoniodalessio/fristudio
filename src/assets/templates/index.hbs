@@ -4,23 +4,16 @@ key: index
 ---
 
 <div class="page {{this.title}}">
-	<div class="main-gallery">
-		<div class="main-gallery__container">
-			<i class="icon icon-logo"></i>
-			<div class="main-gallery__text">
-				<p>frist<br>studio_</p>
-				<div class="text-animation">
-					<div class="text-animation__container">
-						<p>firenze</p>
-						<p>ricerca</p>
-						<p>immagina</p>
-						<p>progetta</p>
-						<p>racconta</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<ul class="projects">
+		{{#each this.resources.projects}}
+		<li>
+			<a href="{{this.slug}}.html">
+				<img src="https://www.fristudio.it/images/{{getcover this.images}}.jpg" />
+				<h2>{{this.title}}</h2>
+			</a>
+		</li>
+		{{/each}}
+	</ul>
 </div>
 
 <script src="js/index.min.js" async deferred></script>

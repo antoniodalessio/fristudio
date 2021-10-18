@@ -6,14 +6,13 @@ import loginController from './controllers/login.controller'
 import apiRoutes from './routes/api'
 import publicRoutes from './routes/public'
 //import siteRoutes from './routes/site'
-import { User, Image } from './models'
+import { User } from './models'
 
 import { Types } from 'mongoose';
 import { toHash } from './utils/utils'
 
 import SeoHelper from './helpers/SeoHelper';
-
-import { Project, IProject } from './models'
+import WatcherService from './services/watcher.service';
 
 //var fs = require('//');
 var Jimp = require('jimp');
@@ -21,15 +20,6 @@ var Jimp = require('jimp');
 const mongoose = require('mongoose');
 
 var fs = require('fs');
-var mysql      = require('mysql');
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  port     :  '8889',
-  user     : 'root',
-  password : 'root',
-  database : 'fristudio_backup'
-});
-
 
 class App {
   
@@ -49,6 +39,10 @@ class App {
     if (process.env.ENV == 'PROD') {
       const seoHelper:SeoHelper = new SeoHelper()
       seoHelper.downloadHtaccess()
+    }
+
+    if (process.env.ENV == 'DEV') {
+      new WatcherService()
     }
 
   }
@@ -89,7 +83,7 @@ class App {
     this._expressApp.use('/api/', apiRoutes());
     this._expressApp.use('/public/', publicRoutes());
 
-    //this._expressApp.use('/', siteRoutes())
+    this._expressApp.use('/', express.static('./site'))
     
   }
 

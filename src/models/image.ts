@@ -12,6 +12,9 @@ const image: Schema = new Schema({
     ord: {
         type: Number
     },
+    cover: {
+        type: Boolean
+    },
     type: {
         type: String
     }
@@ -22,7 +25,8 @@ interface IImage extends Document {
     uri: string;
     uri_full: string;
     ord: number,
-    type: string
+    type: string,
+    cover: boolean
 }
 
 export { 

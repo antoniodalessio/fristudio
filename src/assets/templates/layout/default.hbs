@@ -3,32 +3,18 @@
     <head>
         {{> head }}
     </head>
-    <body>
+    <body class="page-{{this.template}}">
         <header>
-            <div>
-                <a href="/">
-                    <i class="icon icon-logo logo"></i>
-                </a>
-            </div>
-            <div class="menu">
-                <button>
-                    <i class="icon icon-hamburger"></i>
-                </button>
-                {{> menu}}
-            </div>
+            {{> header}}
         </header>
-        
-        <div class="left-text">
-            Branding / Graphic design
-        </div>
-
-        <div class="right-text">
-            Illustrazione / Packaging
-        </div>
 
         <div id="app">
             {{> body }}
         </div>
+
+        <footer>
+            {{> footer}}
+        </footer>
 
         <!-- Google Analytics -->
         <script>

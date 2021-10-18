@@ -36,9 +36,12 @@ class LoginController {
   async logout(req: any, res: any) {
     const token = req.body.token
     let result:IUser[] = await User.find({ token })
-    result[0].token = ""
-    await User.updateOne({_id: result[0]._id},result[0])
-    res.status(200).json({message: "logout"}) 
+    if (result && result.length) {
+      result[0].token = ""
+      await User.updateOne({_id: result[0]._id},result[0])
+    }else{
+      res.status(200).json({message: "logout"}) 
+    }
   }
 
 }

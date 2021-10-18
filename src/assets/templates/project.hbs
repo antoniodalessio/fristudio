@@ -1,0 +1,29 @@
+---
+home: portfolio
+key: portfolio
+---
+
+
+<div class="page project">
+	<ul class="project-images">
+		<ul>
+			<li>
+				<img src="https://www.fristudio.it/images/{{getcover this.images}}.jpg" />
+				<h2>{{this.title}}</h2>
+				<div class="content">
+					{{{this.body}}}
+				</div>
+			</li>
+		</ul>
+		{{#each this.images}}
+			{{#unless this.cover}}
+			<li>
+				<img src="https://www.fristudio.it/images/{{this.uri}}.jpg" />
+			</li>
+			{{/unless}}
+		{{/each}}
+	</ul>
+</div>
+
+
+<script src="js/portfolio.min.js" async deferred></script>

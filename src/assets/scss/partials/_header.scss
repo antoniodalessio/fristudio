@@ -1,121 +1,121 @@
 header {
-	display: flex;
-	justify-content: space-between;
-  margin-top: 20px;
+  width: calc(100vw - #{2 * $header-padding});
   position: fixed;
+  padding: $header-padding;
+  top: 0;
   z-index: 10;
-  width: calc(100% - (#{$marigin-header} * 2));
-  margin-left: $marigin-header;
-  margin-right: $marigin-header;
-	.menu {
-		button {
-      padding: 0;
-			background-color: transparent;
-			border: none;
-			color: white;
-			display: flex;
-			align-items: center;
-      span {
-        display: inline-block;
+  //background-color: white;
+  //box-shadow: 0px 2px 20px 0px #ccc;
+	.header-desktop {
+    display: none;
+    //background-color: white;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    div {
+      width: 33.3%;
+    }
+    .logo {
+      order: 0;
+      i {
+        color: black;
+        font-size: 60px;
+        
       }
-		}
-    .icon-hamburger {
-      font-size: 30px;
-      display: none;
+      @media only screen and (max-width: 600px) {
+        i {
+          font-size: 43px;
+        }
+      }
     }
-    .label {
-      font-size: 16px;
-      margin-left: 10px;
-    }
-    .menu__container {
-      z-index: 10;
-      transition: left 0.5s;
-      .close-icon {
-        position: absolute;
-        display: none;
-        top: 10px;
-        right: 30px;
-        .icon-chiudi {
+    .menu {
+      display: flex;
+      justify-content: center;
+      ul {
+        display: flex;
+        li:first-child {
+          margin-right: 30px;
+        }
+        a {
+          color: black;
           font-size: 30px;
         }
       }
-      nav {
-        
-        ul {
-          display: flex;
-        }
-        a {
-          color: #fff;
-          font-size: 14px;
-          font-weight: bold;
-          text-transform: capitalize;
-          transition: color 0.7s;
-        }
-        li {
-          margin-right: 20px;
-          &:last-child {
-            margin-right: 0;
-          }
-        }
-        li.active > a, li:hover > a{
-          color: #000000;
-        }
-        .submenu {
-          display: none;
-          padding: 10px 0;
-          a {
-            font-size: 5vw;
-          }
-        }
+      @media only screen and (max-width: 600px) {
+        display: none;
       }
+    }
 
-      &.open {
-        left: 0;
-      }
-    }
-	}
-	.logo {
-		font-size: 40px;
-    color: #fff;
-    transition: color 0.7s;
-    &:hover {
-      color: #000;
-    }
-	}
-  
-  @media only screen and (max-width: 1024px) {
-    .menu {
-      button .icon-hamburger{
-        display: block;
-      }
-      .menu__container {
-        position: fixed;
-        top: 0;
-        left: -100vw;
-        background-color: rgba(0, 0, 0, 0.8);
-        width: 100%;
-        height: 100vh;
-        .close-icon {
-            display: block;
-        }
-        nav {
-          margin-top: 5vh;
-          margin-left: 30px;
-          a {
-            font-size: 30px;
-          }
-          ul {
-            flex-direction: column;
-          }
-          li {
-            line-height: 50px;
-          }
-          li.active > a, li:hover > a{
-            color: #ccc;
-          }
-        }
-      }
+    @media only screen and (max-width: 600px) {
+      background-color: white;
     }
 
   }
+
+  .fristudio {
+    font-size: 30px;
+    text-align: right;
+    @media only screen and (max-width: 600px) {
+      font-size: 22px;
+      order: 1;
+      text-align: center;
+    }
+  }
+
+  .menu-mobile {
+    display: none;
+    @media only screen and (max-width: 600px) {
+      display: block;
+      order: 2;
+      text-align: right;
+      font-size: 30px;
+      .icon-chiudi {
+        display:none
+      }
+      .hamburger {
+        color: black;
+        &.open {
+          .icon-chiudi {
+            display: block;
+          }
+          .icon-hamburger {
+            display: none;
+          }
+        }
+
+      }
+      .menu-content {
+        height: 0;
+        overflow: hidden;
+        position: fixed;
+        top: 120px;
+        left: 0;
+        width: calc(100vw - 60px);
+        background-color: white;
+        text-align: left;
+        padding: 0 30px;
+        transition: all .5s ease-in-out;
+        li {
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
+          line-height: 50px;
+          a {
+            color: black;
+            font-size: 18px;
+            text-transform: uppercase;
+          }
+        }
+        &.open {
+          height: 350px;
+          border-bottom: 3px solid black;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    background-color: white;
+  }
+
 }

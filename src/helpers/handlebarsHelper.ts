@@ -56,4 +56,14 @@ handlebars.registerHelper('limit', function (arr: any, limit: any) {
     return variable.replace(/(['"])/g, '\\$1');
   });
 
+  handlebars.registerHelper('getcover', function(images: any) {
+    for (let image of images) {
+      if (image.cover) {
+        return image.uri
+      }
+    }
+
+    return "8e7eae32b1607415be4f31babe3668a2"
+  });
+
   export default handlebars;

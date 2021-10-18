@@ -1,13 +1,6 @@
 
 // Body
-$body-bg: #d8d8d8;
-
-// Borders
-$laravel-border-color: darken($body-bg, 10%);
-$list-group-border: $laravel-border-color;
-$navbar-default-border: $laravel-border-color;
-$panel-default-border: $laravel-border-color;
-$panel-inner-border: $laravel-border-color;
+$body-bg: #fff;
 
 // Brands
 $brand-primary: #3097D1;
@@ -36,3 +29,5 @@ $input-color-placeholder: lighten($text-color, 30%);
 
 // Panels
 $panel-default-heading-bg: #fff;
+
+$header-padding: 30px;
