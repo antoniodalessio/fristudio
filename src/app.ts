@@ -14,7 +14,6 @@ import { toHash } from './utils/utils'
 import SeoHelper from './helpers/SeoHelper';
 import WatcherService from './services/watcher.service';
 
-//var fs = require('//');
 var Jimp = require('jimp');
 
 const mongoose = require('mongoose');
