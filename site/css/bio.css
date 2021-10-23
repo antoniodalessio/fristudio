@@ -1,5 +1,19 @@
 @font-face {
   font-family: 'Ambit';
+  src: url("../fonts/Ambit-Regular.eot");
+  src: url("../fonts/Ambit-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Ambit-Regular.woff2") format("woff2"), url("../fonts/Ambit-Regular.woff") format("woff"), url("../fonts/Ambit-Regular.ttf") format("truetype"), url("../fonts/Ambit-Regular.svg#Ambit-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'Ambit';
+  src: url("../fonts/Ambit-Light.eot");
+  src: url("../fonts/Ambit-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Ambit-Light.woff2") format("woff2"), url("../fonts/Ambit-Light.woff") format("woff"), url("../fonts/Ambit-Light.ttf") format("truetype"), url("../fonts/Ambit-Light.svg#Ambit-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'Ambit';
   src: url("../fonts/Ambit-Bold.eot");
   src: url("../fonts/Ambit-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Ambit-Bold.woff2") format("woff2"), url("../fonts/Ambit-Bold.woff") format("woff"), url("../fonts/Ambit-Bold.ttf") format("truetype"), url("../fonts/Ambit-Bold.svg#Ambit-Bold") format("svg");
   font-weight: bold;
@@ -7,9 +21,9 @@
   font-display: swap; }
 @font-face {
   font-family: 'Ambit';
-  src: url("../fonts/Ambit-Regular.eot");
-  src: url("../fonts/Ambit-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Ambit-Regular.woff2") format("woff2"), url("../fonts/Ambit-Regular.woff") format("woff"), url("../fonts/Ambit-Regular.ttf") format("truetype"), url("../fonts/Ambit-Regular.svg#Ambit-Regular") format("svg");
-  font-weight: normal;
+  src: url("../fonts/Ambit-SemiBold.eot");
+  src: url("../fonts/Ambit-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Ambit-SemiBold.woff2") format("woff2"), url("../fonts/Ambit-SemiBold.woff") format("woff"), url("../fonts/Ambit-SemiBold.ttf") format("truetype"), url("../fonts/Ambit-SemiBold.svg#Ambit-SemiBold") format("svg");
+  font-weight: 600;
   font-style: normal;
   font-display: swap; }
 /* RESET */
@@ -120,7 +134,8 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 body {
   background-color: #fff;
   color: black;
-  font-family: 'Ambit'; }
+  font-family: 'Ambit';
+  font-weight: 300; }
 
 hr {
   background-color: black;
@@ -168,7 +183,8 @@ header {
           margin-right: 30px; }
         header .header-desktop .menu ul a {
           color: black;
-          font-size: 30px; }
+          font-size: 30px;
+          font-weight: 600; }
       @media only screen and (max-width: 600px) {
         header .header-desktop .menu {
           display: none; } }
@@ -177,7 +193,8 @@ header {
         background-color: white; } }
   header .fristudio {
     font-size: 30px;
-    text-align: right; }
+    text-align: right;
+    font-weight: 600; }
     @media only screen and (max-width: 600px) {
       header .fristudio {
         font-size: 22px;
@@ -203,7 +220,7 @@ header {
           height: 0;
           overflow: hidden;
           position: fixed;
-          top: 120px;
+          top: 110px;
           left: 0;
           width: calc(100vw - 60px);
           background-color: white;
@@ -211,9 +228,10 @@ header {
           padding: 0 30px;
           transition: all .5s ease-in-out; }
           header .menu-mobile .menu-content li {
-            border-top: 1px solid black;
             border-bottom: 1px solid black;
             line-height: 50px; }
+            header .menu-mobile .menu-content li:first-child {
+              border-top: 1px solid black; }
             header .menu-mobile .menu-content li a {
               color: black;
               font-size: 18px;
@@ -271,7 +289,9 @@ footer {
   margin-top: 50px;
   margin-bottom: 20px; }
 .page .bio-email {
-  margin-bottom: 80px; }
+  margin-bottom: 80px;
+  font-size: 30px;
+  font-weight: 600; }
 .page .bio-picture-info {
   margin-top: 10px;
   font-size: 12px; }

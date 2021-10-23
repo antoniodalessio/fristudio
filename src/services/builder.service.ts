@@ -56,7 +56,7 @@ class BuilderService {
 
         if (resource.type == 'projects') {
           resources.projects = (await Project.find()
-                                .sort('order')
+                                .sort('ord')
                                 .populate({path: 'images', options: { sort: { 'ord': 1 } } }))
                                 .map((item: any) => item ? item.toObject() : null)
         }

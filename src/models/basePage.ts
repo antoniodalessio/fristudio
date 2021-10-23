@@ -37,7 +37,7 @@ const defaultPageField = {
     type: String
   },
   ord: {
-    type: String
+    type: Number
   },
   published: {
     type: Boolean
@@ -55,7 +55,7 @@ interface IBasePage extends Document {
   subtitle: string;
   subbody: string;
   slug: string;
-  ord: string;
+  ord: number;
   published: boolean;
   icon: string;
 }

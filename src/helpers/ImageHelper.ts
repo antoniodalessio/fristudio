@@ -41,7 +41,7 @@ class ImageHelper {
     let result = await image.getBufferAsync(Jimp.MIME_JPEG);
     await fs.writeFileSync(`${process.env.SITE_IMAGE_PATH}${name}${suffix}.jpg`, result)
     await clientftp.upload(`${process.env.SITE_IMAGE_PATH}${name}${suffix}.jpg`, `${process.env.REMOTE_IMAGES_PATH}${name}${suffix}.jpg`, 755)
-    await this.clearFolder()
+    //await this.clearFolder()
     console.log(`${process.env.SITE_IMAGE_PATH}${name}.jpg uploaded`)
   }
 

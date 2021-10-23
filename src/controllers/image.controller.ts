@@ -43,7 +43,7 @@ class ImageController extends BaseController {
       let data: any = await Image.find({_id: id})
       
       if (data.length == 0) {
-        res.status(500).json({error: `resource product with '${id}' doesn't exists`})
+        res.status(500).json({error: `resource image with '${id}' doesn't exists`})
         return;
       }
 

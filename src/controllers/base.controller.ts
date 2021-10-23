@@ -59,7 +59,7 @@ class BaseController {
 
         limit = range[1] - range[0] + 1
 
-        const data = await this.model.find(filter).sort(sort).skip(range[0]).limit(limit).populate(populate)
+        const data = await this.model.find(filter).sort(sort).collation({locale: "en_US", numericOrdering: true}).skip(range[0]).limit(limit).populate(populate)
         res.header('Content-Range' , all.length );
         res.status(200).json(data);
       }catch(e) {

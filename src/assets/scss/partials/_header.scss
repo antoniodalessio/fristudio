@@ -40,6 +40,7 @@ header {
         a {
           color: black;
           font-size: 30px;
+          font-weight: 600;
         }
       }
       @media only screen and (max-width: 600px) {
@@ -56,6 +57,7 @@ header {
   .fristudio {
     font-size: 30px;
     text-align: right;
+    font-weight: 600;
     @media only screen and (max-width: 600px) {
       font-size: 22px;
       order: 1;
@@ -89,7 +91,7 @@ header {
         height: 0;
         overflow: hidden;
         position: fixed;
-        top: 120px;
+        top: 110px;
         left: 0;
         width: calc(100vw - 60px);
         background-color: white;
@@ -97,7 +99,9 @@ header {
         padding: 0 30px;
         transition: all .5s ease-in-out;
         li {
-          border-top: 1px solid black;
+          &:first-child {
+            border-top: 1px solid black;
+          }
           border-bottom: 1px solid black;
           line-height: 50px;
           a {
