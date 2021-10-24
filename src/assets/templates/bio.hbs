@@ -6,7 +6,9 @@ key: bio
 <div class="page bio">
 	<div class="bio__content">
 		{{{this.body}}}
-		{{{this.subbody}}}
+		<div class="hide-on-mobile">
+			{{{this.subbody}}}
+		</div>
 	</div>
 	<div class="bio__services">
 		<h2>Servizi</h2>
@@ -19,14 +21,18 @@ key: bio
 			<li>→ Strumenti digitali</li>
 			<li>→ UI</li>
 		</ul>
-		<p class="bio-dot-divider">
-			
-		</p>
-		<p class="bio-email">
+		<p class="bio-dot-divider"></p>
+		<p class="bio-email hide-on-mobile">
 			info@fristudio.it
 		</p>
 		<img src="images/fristudio_grafico_firenze_designer_studio.jpg">
 		<p class="bio-picture-info">Ritratto di Michele Borzoni, 2021</p>
+		<div class="hide-on-desktop">
+			{{{this.subbody}}}
+		</div>
+		<p class="bio-email hide-on-desktop">
+			info@fristudio.it
+		</p>
 	</div>
 </div>
 

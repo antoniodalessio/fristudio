@@ -152,6 +152,10 @@ strong {
   .hide-on-desktop {
     display: none; } }
 
+@media only screen and (max-width: 600px) {
+  .hide-on-mobile {
+    display: none; } }
+
 header {
   width: calc(100vw - 60px);
   position: fixed;
@@ -271,6 +275,10 @@ footer {
       width: 85%; }
       .page.bio > div {
         width: 100%; } }
+.page .img-mobile {
+  width: 100%; }
+  .page .img-mobile img {
+    width: 100%; }
 .page .bio__content {
   font-size: 24px;
   padding-right: 10%;
@@ -278,7 +286,8 @@ footer {
   @media only screen and (max-width: 600px) {
     .page .bio__content {
       padding-right: 0;
-      font-size: 18px; } }
+      font-size: 18px;
+      line-height: 20px; } }
 .page .bio__services {
   font-size: 20px; }
   .page .bio__services h2 {

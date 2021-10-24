@@ -21,6 +21,13 @@
         }
     }
 
+    .img-mobile {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+
     .bio__content {
         font-size: 24px;
         padding-right: 10%;
@@ -28,6 +35,7 @@
         @media only screen and (max-width: 600px) {
             padding-right: 0;
             font-size: 18px;
+            line-height: 20px;
         }
     }
 

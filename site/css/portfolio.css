@@ -153,6 +153,10 @@ strong {
   .hide-on-desktop {
     display: none; } }
 
+@media only screen and (max-width: 600px) {
+  .hide-on-mobile {
+    display: none; } }
+
 header {
   width: calc(100vw - 60px);
   position: fixed;
@@ -278,6 +282,12 @@ footer {
     margin-bottom: 20px;
     margin-top: 50px;
     text-transform: capitalize; }
+    @media only screen and (max-width: 600px) {
+      .project-images h2 {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;
+        margin-top: 20px; } }
   .project-images .content {
     font-size: 26px;
     margin-bottom: 40px;
@@ -287,6 +297,7 @@ footer {
     @media only screen and (max-width: 600px) {
       .project-images .content {
         width: 100%;
-        font-size: 18px; } }
+        font-size: 18px;
+        line-height: 20px; } }
 
 /*# sourceMappingURL=portfolio.css.map */

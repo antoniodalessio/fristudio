@@ -89,6 +89,12 @@ $marigin-header: 30px;
   }
 }
 
+.hide-on-mobile {
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
 @import "partials/header";
 @import "partials/footer";
 

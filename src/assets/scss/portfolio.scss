@@ -25,6 +25,12 @@
     margin-bottom: 20px;
     margin-top: 50px;
     text-transform: capitalize;
+    @media only screen and (max-width: 600px) {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 600;
+      margin-top: 20px;
+    }
   }
 
   .content {
@@ -36,6 +42,7 @@
     @media only screen and (max-width: 600px) {
       width: 100%;
       font-size: 18px;
+      line-height: 20px;
     }
   }
 }
