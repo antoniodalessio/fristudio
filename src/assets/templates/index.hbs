@@ -8,7 +8,12 @@ key: index
 		{{#each this.resources.projects}}
 		<li>
 			<a href="{{this.slug}}.html">
-				<img src="images/{{getcover this.images}}.jpg" />
+				<picture>
+					<source media="(min-width:600px)" srcset="images/{{getcover this.images}}_thumb.jpg">
+					<source media="(max-width:601px)" srcset="images/{{getcover this.images}}.jpg">
+					<img src="images/{{getcover this.images}}.jpg" />
+				</picture>
+				
 				<h2>{{this.title}}</h2>
 			</a>
 		</li>

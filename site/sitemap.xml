@@ -25,12 +25,12 @@
              <image:image>
                 <image:caption></image:caption>
                 <image:geo_location>Florence, Italy</image:geo_location>
-                <image:loc>https://www.fristudio.it/images/work/monogramma_thumb.jpg</image:loc>
+                <image:loc>https://www.fristudio.it/images/work/1a1a5e7a8cde5e57c98a2fd93d5c4f8c_thumb.jpg</image:loc>
               </image:image>
              <image:image>
                 <image:caption></image:caption>
                 <image:geo_location>Florence, Italy</image:geo_location>
-                <image:loc>https://www.fristudio.it/images/work/1a1a5e7a8cde5e57c98a2fd93d5c4f8c_thumb.jpg</image:loc>
+                <image:loc>https://www.fristudio.it/images/work/bleb_naked_thumb.jpg</image:loc>
               </image:image>
              <image:image>
                 <image:caption></image:caption>
@@ -60,17 +60,12 @@
              <image:image>
                 <image:caption></image:caption>
                 <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/monogramma_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
                 <image:loc>https://www.fristudio.it/images/work/853f9c926913bac546a832c7ab7f270f_thumb.jpg</image:loc>
-              </image:image>
-             <image:image>
-                <image:caption></image:caption>
-                <image:geo_location>Florence, Italy</image:geo_location>
-                <image:loc>https://www.fristudio.it/images/work/bleb_naked_thumb.jpg</image:loc>
-              </image:image>
-             <image:image>
-                <image:caption></image:caption>
-                <image:geo_location>Florence, Italy</image:geo_location>
-                <image:loc>https://www.fristudio.it/images/work/WhatsApp Image 2021-02-04 at 21.52.47_thumb.jpg</image:loc>
               </image:image>
         </url>
         <url>
@@ -252,6 +247,11 @@
              <image:image>
                 <image:caption></image:caption>
                 <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/03f7f54bc12811d70fb9daaf73caf277_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
                 <image:loc>https://www.fristudio.it/images/work/6b351080170e948682309b6d81697ca5_thumb.jpg</image:loc>
               </image:image>
              <image:image>
@@ -308,11 +308,6 @@
                 <image:caption></image:caption>
                 <image:geo_location>Florence, Italy</image:geo_location>
                 <image:loc>https://www.fristudio.it/images/work/52e18acaf45156a5331f33d1cda0c00b_thumb.jpg</image:loc>
-              </image:image>
-             <image:image>
-                <image:caption></image:caption>
-                <image:geo_location>Florence, Italy</image:geo_location>
-                <image:loc>https://www.fristudio.it/images/work/03f7f54bc12811d70fb9daaf73caf277_thumb.jpg</image:loc>
               </image:image>
         </url>
         <url>
@@ -432,7 +427,7 @@
               </image:image>
         </url>
         <url>
-            <loc>https://www.fristudio.it/menù.html</loc>
+            <loc>https://www.fristudio.it/menu-poggio-ai-santi.html</loc>
              <image:image>
                 <image:caption></image:caption>
                 <image:geo_location>Florence, Italy</image:geo_location>
@@ -759,21 +754,6 @@
              <image:image>
                 <image:caption></image:caption>
                 <image:geo_location>Florence, Italy</image:geo_location>
-                <image:loc>https://www.fristudio.it/images/work/carta01_thumb.jpg</image:loc>
-              </image:image>
-             <image:image>
-                <image:caption></image:caption>
-                <image:geo_location>Florence, Italy</image:geo_location>
-                <image:loc>https://www.fristudio.it/images/work/c2df68273ebd84a218a8b3a05a94f9dc_thumb.jpg</image:loc>
-              </image:image>
-             <image:image>
-                <image:caption></image:caption>
-                <image:geo_location>Florence, Italy</image:geo_location>
-                <image:loc>https://www.fristudio.it/images/work/02b1e20a5842bd5bd8166b0c371a528f_thumb.jpg</image:loc>
-              </image:image>
-             <image:image>
-                <image:caption></image:caption>
-                <image:geo_location>Florence, Italy</image:geo_location>
                 <image:loc>https://www.fristudio.it/images/work/024fc2b9c2f0b087a76dfa1318b34533_thumb.jpg</image:loc>
               </image:image>
              <image:image>
@@ -835,6 +815,31 @@
                 <image:caption></image:caption>
                 <image:geo_location>Florence, Italy</image:geo_location>
                 <image:loc>https://www.fristudio.it/images/work/35efc5d77734a4822fa03850168f9043_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/02b1e20a5842bd5bd8166b0c371a528f_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/carta01_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/menu_insieme_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/carta01_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/c2df68273ebd84a218a8b3a05a94f9dc_thumb.jpg</image:loc>
               </image:image>
         </url>
         <url>
@@ -901,12 +906,173 @@
               </image:image>
         </url>
         <url>
+            <loc>https://www.fristudio.it/di-semi-e-di-pietre.html</loc>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/mostra_fotografica_allestimento_fristudio01_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/mostra_fotografica_allestimento_fristudio03_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/mostra_fotografica_allestimento_fristudio04_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/mostra_fotografica_allestimento_fristudio_05_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/mostra_fotografica_allestimento_fristudio_06_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/mostra_fotografica_allestimento_fristudio_08_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/mostra_fotografica_allestimento_fristudio_09_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/mostra_fotografica_allestimento_fristudio_10_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/mostra_fotografica_allestimento_fristudio_11_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/mostra_fotografica_allestimento_fristudio_12_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/mostra_fotografica_allestimento_fristudio_13_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/mostra_fotografica_allestimento_fristudio_14_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/mostra_fotografica_allestimento_fristudio_15_thumb.jpg</image:loc>
+              </image:image>
+        </url>
+        <url>
+            <loc>https://www.fristudio.it/fichi-secchi-nuovo.html</loc>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/menu_ristorante_cocktail_fristudio_01_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/menu_ristorante_cocktail_fristudio_02_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/menu_ristorante_cocktail_fristudio_03_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/menu_ristorante_cocktail_fristudio_04_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/menu_ristorante_cocktail_fristudio_05_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/menu_ristorante_cocktail_fristudio_06_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/menu_ristorante_cocktail_fristudio_07_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/menu_ristorante_cocktail_fristudio_08_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/menu_ristorante_cocktail_fristudio_09_thumb.jpg</image:loc>
+              </image:image>
+        </url>
+        <url>
+            <loc>https://www.fristudio.it/stai-karma.html</loc>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/cbd_packaging_nature_grafica_fristudio_01_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/cbd_packaging_nature_grafica_fristudio_02_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/cbd_packaging_nature_grafica_fristudio_03_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/cbd_packaging_nature_grafica_fristudio_04_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/cbd_packaging_nature_grafica_fristudio_05_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/cbd_packaging_nature_grafica_fristudio_06_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/cbd_packaging_nature_grafica_fristudio_07_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/cbd_packaging_nature_grafica_fristudio_08_thumb.jpg</image:loc>
+              </image:image>
+             <image:image>
+                <image:caption></image:caption>
+                <image:geo_location>Florence, Italy</image:geo_location>
+                <image:loc>https://www.fristudio.it/images/work/cbd_packaging_nature_grafica_fristudio_09_thumb.jpg</image:loc>
+              </image:image>
+        </url>
+        <url>
             <loc>https://www.fristudio.it/simone-montagnani-graphic-designer.html</loc>
         </url>
         <url>
             <loc>https://www.fristudio.it/contatti-simone-montagnani-designer-firenze.html</loc>
-        </url>
-        <url>
-            <loc>https://www.fristudio.it/progetti-simone-montagnani-designer-freelance.html</loc>
         </url>
     </urlset>
