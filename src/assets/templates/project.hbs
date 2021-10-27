@@ -9,7 +9,7 @@ key: portfolio
 		<ul>
 			<li>
 				<picture>
-					<source media="(min-width:600px)" srcset="images/{{this.uri}}.jpg">
+					<source media="(min-width:600px)" srcset="images/{{getcover this.images}}.jpg">
 					<img src="images/{{getcover this.images}}_thumb.jpg" />
 				</picture>
 				<h2>{{this.title}}</h2>
