@@ -1,12 +1,12 @@
 const IMAGES_TYPES = [
     {
       postfix: "",
-      width: 1024,
+      width: 2048,
       height: 0 
     },
     {
       postfix: "_normal",
-      width: 640,
+      width: 2048,
       height: 0 
     },
     {
@@ -16,7 +16,7 @@ const IMAGES_TYPES = [
     },
     {
       postfix: "_x2",
-      width: 640,
+      width: 2048,
       height: 0 
     }
   ]
