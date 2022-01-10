@@ -9,7 +9,7 @@ key: portfolio
 		<ul>
 			<li>
 				<picture>
-					<source media="(min-width:600px)" srcset="images/{{getcover this.images}}_x2.jpg">
+					<source media="(min-width:600px)" srcset="images/{{getcover this.images}}.jpg">
 					<img src="images/{{getcover this.images}}_thumb.jpg" />
 				</picture>
 				<h2>{{this.title}}</h2>
@@ -22,7 +22,7 @@ key: portfolio
 			{{#unless this.cover}}
 			<li>
 				<picture>
-					<source media="(min-width:600px)" srcset="images/{{this.uri}}_x2.jpg">
+					<source media="(min-width:600px)" srcset="images/{{this.uri}}.jpg">
 					<img src="images/{{this.uri}}_thumb.jpg" />
 				</picture>
 			</li>
